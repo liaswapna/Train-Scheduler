@@ -57,8 +57,8 @@ function updateDisplay(){
 
         // Display the datas on to the table.
         let newRow = $("<tr>").append(
-            $("<td>").text(trainName),
-            $("<td>").text(destination),
+            $("<td>").text(trainName.toUpperCase()),
+            $("<td>").text(destination.toUpperCase()),
             $("<td>").text(frequency),
             $("<td>").text(trainTime),
             $("<td>").text(remainTime)
