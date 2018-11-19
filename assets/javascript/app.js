@@ -33,6 +33,15 @@ $("#add-train-button").on("click",function(event){
 
     // Push the data into the firebase.
     database.ref().push(data);
+
+    // update the display
+    updateDisplay();
+
+    // clear the input fields.
+    $("#train-name-input").val("");
+    $("#destination-input").val("");
+    $("#first-time-input").val("");
+    $("#frequency-input").val("");
 });
 
 // Function to retrieve, calculate and display the data.
