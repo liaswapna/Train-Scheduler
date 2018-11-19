@@ -28,7 +28,7 @@ In this assignment, you'll create a train schedule application that incorporates
 
 * [style.css](https://github.com/liaswapna/Train-Scheduler/blob/master/assets/css/style.css)
 
-* [gif.js](https://github.com/liaswapna/Train-Scheduler/blob/master/assets/javascript/app.js)
+* [app.js](https://github.com/liaswapna/Train-Scheduler/blob/master/assets/javascript/app.js)
 
 ### Technologies Used
 ---
@@ -69,43 +69,7 @@ In this assignment, you'll create a train schedule application that incorporates
     setInterval(updateDisplay,60*1000);
     ```
     
-#### Additional Features
-* The app is fully mobile responsive.
-* Integrated the search with additional APIs such as OMDB.
-* Code and Syntax to integrate search with OMDB APIs.
-```javascript
-var queryURL1 = `https://api.giphy.com/v1/gifs/search?q=${movieName}&api_key=A2Hw4RAXUAp9JUnpyZh9PqNapjox1Tj6&limit=${previousCount}`;
-var queryURL2 = `http://www.omdbapi.com/?t=${movieName}&apikey=trilogy`;
-$.when( $.ajax({ url:queryURL1,method:"GET",dataType:"json"}), $.ajax({url:queryURL2,method:"GET",dataType:"json"})).then(function(response,omdbResponse ) {
-});
-```
-* Allow users to request additional gifs to be added to the page.
-* Code and Syntax to request additional gifs.
-```javascript
-var queryURL = `http://api.giphy.com/v1/gifs/search?q=${movieName}&api_key=A2Hw4RAXUAp9JUnpyZh9PqNapjox1Tj6&limit=${previousCount}`;
-```
-* Download button for each gif images that opens in new tab to right click and save image.
-* Code and Syntax to download gifs.
-```javascript
-newAnchor.attr("download","file.jpg");
-```
-
-* Allow users to add/remove their favorite gifs to a `favorites` section, made this section persist even when the page is reloaded via `localStorage`.
-* Code and Syntax to store/retrieve data from localStorage.
-```javascript
-localStorage.setItem("fav",JSON.stringify(favourites));
-
-favourites = JSON.parse(localStorage.getItem("fav"));
-```
-* Code and Syntax to add gifs to favourites.
-```javascript
-favourites.push(favId);
-```
-* Code and Syntax to remove gifs from favourites.
-```javascript
-favourites.splice(remIndex,1);
-```
 
 ### NOTE
-* [Link to my GifTastic App](https://liaswapna.github.io/Train-Scheduler/)
+* [Link to my Train Scheduler App](https://liaswapna.github.io/Train-Scheduler/)
 
